@@ -1,0 +1,213 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} About {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<main>
+    {% include 'includes/preloader.html' %}
+
+    <!-- Hero -->
+    <section class="section-header bg-secondary text-white">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-12 col-md-7 col-lg-6 text-center text-md-left">
+                    <h1 class="display-2 mb-4">Meal Planner Admin Dashboard</h1>
+                    <p class="lead mb-4 text-muted">Start adding meals to the database</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Hero section -->
+
+    <!-- Section -->
+    <section class="section section-lg">
+        <div class="container">
+            <!--            Breakfasts-->
+            <div class="row mb-5 mb-lg-6">
+                <h2 class="h1 mb-4">Breakfasts</h2>
+                <div class="card-group card-group-scroll">
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0 " style="padding-right: 10px;">
+                        <div class="card shadow border-gray-300">
+                            <a href="#" target="_blank" data-bs-toggle="modal"
+                               data-bs-target="#modal-notification" aria-label="dribbble social link"
+                               class="card-img-top">
+                                <span class="fa fa-plus" style="font-size:200px;"></span>
+                            </a>
+                            <div class="card-body">
+                                <h3 class="h4 card-title mb-2">Add a new meal</h3>
+                                <span class="card-subtitle text-gray fw-normal">New Meal</span>
+                                <p class="card-text my-3">This new meal would be added to the breakfast collection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% for meal in breakfast %}
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0 " style="padding-right: 10px;">
+                        <div class="card shadow border-gray-300">
+                            <img src="data:image/png;base64,{{meal.image}}" class="card-img-top rounded-top"
+                                 alt="Food Image"/>
+                            <div class="card-body">
+                                <h3 class="h4 card-title mb-2">{{ meal.meal_name }}</h3>
+                                <span class="card-subtitle text-gray fw-normal">{{ meal.calories}} kcal</span>
+                                <p class="card-text my-3">{{meal.meal_description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!--            Breakfasts End-->
+            <!--            Lunches-->
+            <div class="row mb-5 mb-lg-6">
+                <h2 class="h1 mb-4">Lunches</h2>
+                <div class="card-group card-group-scroll">
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0 " style="padding-right: 10px;">
+                        <div class="card shadow border-gray-300">
+                            <a href="#" target="_blank" data-bs-toggle="modal"
+                               data-bs-target="#modal-notification" aria-label="dribbble social link"
+                               class="card-img-top">
+                                <span class="fa fa-plus" style="font-size:200px;"></span>
+                            </a>
+                            <div class="card-body">
+                                <h3 class="h4 card-title mb-2">Add a new meal</h3>
+                                <span class="card-subtitle text-gray fw-normal">New Meal</span>
+                                <p class="card-text my-3">This new meal would be added to the breakfast collection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% for meal in lunch %}
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0 " style="padding-right: 10px;">
+                        <div class="card shadow border-gray-300">
+                            <img src="data:image/png;base64,{{meal.image}}" class="card-img-top rounded-top"
+                                 alt="Food Image"/>
+                            <div class="card-body">
+                                <h3 class="h4 card-title mb-2">{{ meal.meal_name }}</h3>
+                                <span class="card-subtitle text-gray fw-normal">{{ meal.calories}} kcal</span>
+                                <p class="card-text my-3">{{meal.meal_description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!--            Lunches End-->
+            <!--            Dinner-->
+            <div class="row mb-5 mb-lg-6">
+                <h2 class="h1 mb-4">Dinners</h2>
+                <div class="card-group card-group-scroll">
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0 " style="padding-right: 10px;">
+                        <div class="card shadow border-gray-300">
+                            <a href="#" target="_blank" data-bs-toggle="modal"
+                               data-bs-target="#modal-notification" aria-label="dribbble social link"
+                               class="card-img-top">
+                                <span class="fa fa-plus" style="font-size:200px;"></span>
+                            </a>
+                            <div class="card-body">
+                                <h3 class="h4 card-title mb-2">Add a new meal</h3>
+                                <span class="card-subtitle text-gray fw-normal">New Meal</span>
+                                <p class="card-text my-3">This new meal would be added to the breakfast collection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% for meal in dinner %}
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0 " style="padding-right: 10px;">
+                        <div class="card shadow border-gray-300">
+                            <img src="data:image/png;base64,{{meal.image}}" class="card-img-top rounded-top"
+                                 alt="Food Image"/>
+                            <div class="card-body">
+                                <h3 class="h4 card-title mb-2">{{ meal.meal_name }}</h3>
+                                <span class="card-subtitle text-gray fw-normal">{{ meal.calories}} kcal</span>
+                                <p class="card-text my-3">{{meal.meal_description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <!--            Dinner End-->
+            <div class="col-md-2">
+                <!-- Modal Content -->
+                <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog"
+                     aria-labelledby="modal-notification" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content bg-primary text-white">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn-close bg-gray-500"
+                                        data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="py-3 text-center">
+                                    <h2 class="h4 modal-title my-3">Add a new meal</h2>
+                                </div>
+                                <form method="post" action="" action="#" enctype="multipart/form-data">
+
+                                    {{ form.hidden_tag() }}
+
+                                    <div class="form-group mb-4">
+                                        <label for="meal_name">Meal Name</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="meal_name"><span
+                                                    class="fas fa-drumstick-bite"></span></span>
+                                            {{ form.meal_name(class="form-control") }}
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-4">
+                                        <label for="calories">Calories (kcal)</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="calories"><span
+                                                    class="fas fa-fire"></span></span>
+                                            {{ form.calories(class="form-control") }}
+                                        </div>
+                                    </div>
+
+                                    <!-- Form -->
+                                    <div class="form-group mb-4">
+                                        <label for="meal_description">Meal Description</label>
+                                        <div class="input-group">
+                                            {{ form.meal_description(class="form-control") }}
+                                        </div>
+                                    </div>
+                                    <!-- End of Form -->
+                                    <!-- Form -->
+                                    <div class="form-group mb-4">
+                                        <label class="my-1 me-2" for="meal">Meals</label>
+                                        <div class="input-group">
+                                            {{ form.meal(class="form-control form-select") }}
+                                        </div>
+                                    </div>
+                                    <!-- End of Form -->
+                                    <div class="form-group">
+                                        <!-- Form -->
+                                        <div class="form-group mb-4">
+                                            <label for="image" class="form-label">Image of meal</label>
+                                            {{ form.image(class="form-control") }}
+                                        </div>
+                                        <!-- End of Form -->
+                                    </div>
+                                    <div class="d-grid">
+                                        <button type="submit" name="create_meal" class="btn btn-primary-app">Save Meal
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Modal Content -->
+            </div>
+        </div>
+    </section>
+    <!-- End of section -->
+
+</main>
+
+{% include 'includes/footer-about.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
