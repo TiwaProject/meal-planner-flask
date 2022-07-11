@@ -172,8 +172,6 @@ $ git push heroku HEAD:master
 - `FLASK_ENV`=development
 - `ASSETS_ROOT`=/static/assets
 
-![AppSeed - HEROKU Set UP](https://user-images.githubusercontent.com/51070104/171815176-c1ca7681-38cc-4edf-9ecc-45f93621573d.jpg)
-
 <br />
 
 > **Step 6** - Visit the app in the browser
