@@ -12,6 +12,8 @@ __pycache__/
 *.sqlite
 *.log
 
+.idea
+
 # venv
 env
 venv
